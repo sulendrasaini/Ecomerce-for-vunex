@@ -246,7 +246,7 @@ export const Header = () => {
               {isAuthenticated ? (
                 <Link
                   to="/account"
-                  className="w-10 h-10 rounded-full overflow-hidden bg-neutral-50 border border-neutral-200 flex items-center justify-center"
+                  className="w-7 h-7 rounded-full overflow-hidden bg-neutral-50 border border-neutral-200 flex items-center justify-center"
                   aria-label="Account"
                 >
                   {user?.avatar ? (
@@ -272,7 +272,7 @@ export const Header = () => {
               {/* Cart */}
               <Link
                 to="/cart"
-                className="relative w-10 h-10 rounded-full bg-[#111111] text-white flex items-center justify-center active:scale-95 transition-transform"
+                className="relative w-7 h-7 rounded-full bg-[#111111] text-white flex items-center justify-center active:scale-95 transition-transform"
                 aria-label="Shopping Cart"
               >
                 <ShoppingBag className="w-[18px] h-[18px]" />
