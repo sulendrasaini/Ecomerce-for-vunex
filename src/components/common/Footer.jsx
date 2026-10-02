@@ -12,10 +12,10 @@ export const Footer = () => {
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="flex items-center gap-2">
               <span className="w-8 h-8 rounded-lg bg-[#F15A24] flex items-center justify-center text-white font-black text-lg">
-                N
+                V
               </span>
               <span className="text-2xl font-black tracking-tight text-white">
-                Nova<span className="text-[#F15A24]">Trend</span>
+                Vunex<span className="text-[#F15A24]">Trend</span>
               </span>
             </Link>
             <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm">

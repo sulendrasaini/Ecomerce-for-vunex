@@ -94,18 +94,62 @@ export const Header = () => {
         {/* Right: Wishlist, Account, Cart */}
         <div className="flex items-center gap-2 sm:gap-4">
           {/* Wishlist Link */}
-          <Link
-            to="/wishlist"
-            className="relative p-2.5 text-neutral-700 hover:text-[#F15A24] hover:bg-neutral-50 rounded-full transition-colors"
-            aria-label="Wishlist"
-          >
-            <Heart className="w-5 h-5" />
-            {wishlistCount > 0 && (
-              <span className="absolute top-1 right-1 w-4.5 h-4.5 bg-[#F15A24] text-white text-[10px] font-bold rounded-full flex items-center justify-center leading-none">
-                {wishlistCount > 9 ? '9+' : wishlistCount}
-              </span>
-            )}
-          </Link>
+      {/* Wishlist Link */}
+<Link
+  to="/wishlist"
+  className="
+    relative
+    w-10
+    h-10
+    rounded-full
+    flex
+    items-center
+    justify-center
+    hover:bg-neutral-100
+    transition-all
+    duration-300
+  "
+  aria-label="Wishlist"
+>
+  <Heart
+    className={`
+      w-5 h-5
+      transition-all
+      duration-300
+      ${
+        wishlistCount > 0
+          ? "text-[#E5484D] fill-[#E5484D]"
+          : "text-neutral-700 fill-transparent"
+      }
+    `}
+  />
+
+  {wishlistCount > 0 && (
+    <span
+      className="
+        absolute
+        -top-0.5
+        -right-0.5
+        min-w-[18px]
+        h-[18px]
+        px-1
+        rounded-full
+        bg-[#E5484D]
+        text-white
+        text-[9px]
+        font-bold
+        flex
+        items-center
+        justify-center
+        border-2
+        border-white
+        leading-none
+      "
+    >
+      {wishlistCount > 99 ? "99+" : wishlistCount}
+    </span>
+  )}
+</Link>
 
           {/* User Account / Sign In */}
           <div ref={dropdownRef} className="relative">
