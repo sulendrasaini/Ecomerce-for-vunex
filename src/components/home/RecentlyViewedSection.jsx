@@ -18,11 +18,16 @@ export const RecentlyViewedSection = () => {
           viewAllText="View All"
         />
 
-        <div className="flex gap-3 sm:gap-4 overflow-x-auto no-scrollbar pb-3">
-          {displayItems.map((product) => (
-            <ProductCardCompact key={product.id} product={product} />
-          ))}
-        </div>
+       <div className="flex gap-3 sm:gap-4 overflow-x-auto no-scrollbar pb-3">
+  {displayItems.map((product) => (
+    <div
+      key={product.id}
+      className="flex-none w-[180px] sm:w-[210px] md:w-[230px]"
+    >
+      <ProductCardCompact product={product} />
+    </div>
+  ))}
+</div>
       </div>
     </section>
   );
